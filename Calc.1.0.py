@@ -64,9 +64,9 @@ def beginCalculate():
         E4.delete(0, END)
         Entry.insert(E4, 0, result)
     else:
-      errText.set('Wrong operator, please enter +, -, *, or /')
-  else:
-    errText.set('Fill in the boxes correctly')
+      tkMessageBox.showinfo('Wrong operator', 'Please enter +, -, *, or /')
+  else:    
+    tkMessageBox.showinfo('Missing inputs', 'Please complete all the inputs')
 
 Button(root, text ="Calculate", command = beginCalculate).grid(row = 6, column = 1)
 
